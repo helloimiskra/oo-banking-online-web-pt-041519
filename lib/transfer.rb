@@ -21,7 +21,7 @@ class Transfer
     @receiver.balance = @receiver.balance + self.amount
     if self.status == "pending"
       self.status = "complete"
-      amount = 0
+      self.amount = 0
     end
 
   end

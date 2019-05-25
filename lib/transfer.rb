@@ -20,8 +20,8 @@ class Transfer
     if self.status == "pending" && @sender.balance > 0
       @sender.balance = @sender.balance - self.amount
       @receiver.balance = @receiver.balance + self.amount
-      self.status = "complete"
       self.amount = 0
+      self.status = "complete"
     else
       return "Transaction rejected. Please check your account balance."
     end

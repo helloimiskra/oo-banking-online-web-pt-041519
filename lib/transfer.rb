@@ -18,11 +18,10 @@ class Transfer
 
   def execute_transaction
     @sender.balance = @sender.balance - self.amount
-    @sender.balance
     @receiver.balance = @receiver.balance + self.amount
-    @receiver.balance
     if self.status == "pending"
       self.status = "complete"
+      amount = 0
     end
 
   end

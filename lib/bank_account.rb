@@ -11,4 +11,8 @@ class BankAccount
   def deposit(amount)
     @balance = @balance + amount
   end
+
+  def display_balance(name)
+    "Your balance is $#{name.balance}."
+  end
 end
